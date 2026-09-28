@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гиперссылки</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header id="header">
+    <div class="header-inner">
+
+        <div class="logo">Лого</div>
+
+        <div class="site-title">
+            задание 2
+        </div>
+
+        <nav>
+            <a href="#links"> меню 1</a>
+            <a href="#table">таблица 2</a>
+            <a href="#form">форма 3</a>
+        </nav>
+
+    </div>
+</header>
+
+<main class="content">
+
+    <!-- Содержимое задания 1 -->
+    <section id="links" class="block">
+        <h1>Список гиперссылок</h1>
+
+        <ol>
+            <li>
+                <a href="http://kubsu.ru/">Главная страница КубГУ</a>
+            </li>
+
+            <li>
+                <a href="https://kubsu.ru/">Главная страница КубГУ через HTTPS</a>
+            </li>
+
+            <li>
+                <a href="https://yandex.ru/images/search?text=фото"
+                   target="_blank">
+                     Ссылка на поиск изображений
+                </a>
+            </li>
+
+            <li>
+                <a href="/about/"> Сокращённая ссылка на внутреннюю страницу</a>
+            </li>
+
+            <li>
+                <a href="/"> Ссылка на главную</a>
+            </li>
+
+            <li>
+                <a href="#links"> Ссылка на фрагмент страницы</a>
+            </li>
+
+            <li>
+                <a href="https://kubsu.ru/?time=14%3A00">
+                     КубГУ с параметром time
+                </a>
+            </li>
+
+            <li>
+                <a href="https://kubsu.ru/?id=123">
+                     КубГУ с параметром id
+                </a>
+            </li>
+
+            <li>
+                <a href="about/about.html">
+                     Относительная ссылка
+                </a>
+            </li>
+
+            <li>
+                <a href="about/about.html">
+                     Относительная ссылка на страницу в каталоге about
+                </a>
+            </li>
+
+            <li>
+                <a href="../">
+                     Относительная ссылка на страницу уровнем выше
+                </a>
+            </li>
+
+            <li>
+                <a href="../../">
+                     Относительная ссылка на страницу двумя уровнями выше
+                </a>
+            </li>
+
+            <li>
+                <span>
+                    
+                    <a href="about/about.html">Ссылка внутри span</a>
+                </span>
+            </li>
+
+            <li>
+                <a href="https://example.com/about.html#contacts">
+                     Ссылка на фрагмент стороннего сайта
+                </a>
+            </li>
+
+            <li>
+                <a href=""> Пустой href</a>
+            </li>
+
+            <li>
+                <a> Пустая ссылка</a>
+            </li>
+
+            <li>
+                <a href="https://kubsu.ru/" rel="nofollow">
+                     Ссылка, по которой запрещён переход поисковикам
+                </a>
+            </li>
+
+            <li>
+                <a href="https://kubsu.ru/" title="сайт КубГУ">
+                     Ссылка с title
+                </a>
+            </li>
+
+            <li>
+                <a href="web1.html" title="ссылка на web1.html">
+                     Ссылка на web1.html
+                </a>
+            </li>
+
+            <li>
+                <a href="----"> ХЗ</a>
+            </li>
+        </ol>
+
+        <!-- Из задания 1: карта изображения -->
+        <div class="image-map">
+            <img
+                src="https://img.magnific.com/free-photo/vertical-shot-trees-reflecting-water_181624-44054.jpg"
+                usemap="#myMap"
+                alt="карта"
+            >
+
+            <map name="myMap">
+                <area
+                    shape="rect"
+                    coords="0,0,150,100"
+                    href="about/about.html"
+                    alt="прямоугольник"
+                >
+                <area
+                    shape="circle"
+                    coords="225,50,40"
+                    href="about/about.html"
+                    alt="круг"
+                >
+            </map>
+        </div>
+    </section>
+
+
+    <!-- Таблица из задания 2 -->
+    <section id="table" class="block">
+        <h2>Таблица</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="4">Учебная таблица</th>
+                </tr>
+                <tr>
+                    <th>№</th>
+                    <th>Название</th>
+                    <th>Описание</th>
+                    <th>Ссылка</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>HTML</td>
+                    <td>Разметка веб-страницы</td>
+                    <td>
+                        <a href="https://developer.mozilla.org/ru/docs/Web/HTML"
+                           target="_blank">Подробнее</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2">2</td>
+                    <td>CSS</td>
+                    <td>Оформление страницы</td>
+                    <td>
+                        <a href="https://developer.mozilla.org/ru/docs/Web/CSS"
+                           target="_blank">Подробнее</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>JavaScript</td>
+                    <td>Интерактивность</td>
+                    <td>
+                        <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript"
+                           target="_blank">Подробнее</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Git</td>
+                    <td>Контроль версий</td>
+                    <td>
+                        <a href="https://git-scm.com/" target="_blank">
+                            Подробнее
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td colspan="2">Веб-разработка</td>
+                    <td>
+                        <a href="#header">Наверх</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td>Web UI</td>
+                    <td>Учебное задание</td>
+                    <td>
+                        <a href="#form">К форме</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+    <!-- Форма из задания 1 -->
+    <section id="form" class="block">
+        <h2>Форма</h2>
+
+        <form action="/" method="POST">
+
+            <label>
+                ФИО:<br>
+                <input
+                    name="field-name-1"
+                    placeholder="поле ФИО"
+                >
+            </label>
+
+            <label>
+                Номер:<br>
+                <input
+                    name="field-email"
+                    type="tel"
+                    placeholder="поле tel"
+                >
+            </label>
+
+            <label>
+                Текстовое поле даты:<br>
+                <input
+                    name="field-date"
+                    value="0000-00-00"
+                    type="date"
+                >
+            </label>
+
+            <fieldset>
+                <legend>Радиокнопки:</legend>
+
+                <label class="inline">
+                    <input
+                        type="radio"
+                        checked
+                        name="radio-group-1"
+                        value="Значение1"
+                    >
+                    мужской
+                </label>
+
+                <label class="inline">
+                    <input
+                        type="radio"
+                        name="radio-group-1"
+                        value="Значение2"
+                    >
+                    женский
+                </label>
+            </fieldset>
+
+            <label>
+                Любимый язык программирования:<br>
+
+                <select name="field-name-4[]" multiple>
+                    <option value="Значение1" selected>Python</option>
+                    <option value="Значение2">JavaScript</option>
+                    <option value="Значение3">Java</option>
+                    <option value="Значение4">С++</option>
+                    <option value="Значение5">С#</option>
+                    <option value="Значение6">PHP</option>
+                    <option value="Значение7">Haskel</option>
+                    <option value="Значение8">Prolog</option>
+                    <option value="Значение9">Scala</option>
+                </select>
+            </label>
+
+            <label>
+                Биография:<br>
+                <textarea
+                    name="field-name-2"
+                    placeholder="Введите вашу биографию"
+                ></textarea>
+            </label>
+
+            <label class="checkbox">
+                <input
+                    type="checkbox"
+                    checked
+                    name="check-1"
+                >
+                подтвердить
+            </label>
+
+            <input
+                class="submit"
+                type="submit"
+                value="сохранить"
+            >
+
+        </form>
+    </section>
+
+</main>
+
+
+
+</body>
+</html>
