@@ -1,4 +1,4 @@
-/* Mobile First: базовые стили для смартфонов */
+вное — полностью заменить CSS. Теперь он действительно сделан по принципу Mobile First:
 * {
     box-sizing: border-box;
 }
@@ -10,11 +10,13 @@ html {
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    color: #000;
+    color: #000000;
     background: #e9e4e4;
 }
 
-/* Шапка */
+
+/* HEADER */
+
 header {
     width: 100%;
     background-color: #e6dddd;
@@ -22,36 +24,44 @@ header {
 
 .header-inner {
     width: 100%;
-    margin: 0 auto;
-    padding: 15px;
+    padding: 15px 20px;
+
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
     gap: 15px;
 }
 
 .logo {
-    width: 62px;
-    height: 62px;
-    flex-shrink: 0;
-    border: 1px solid #477da8;
+    width: 80px;
+    height: 80px;
+
+    border: 2px solid #e2e9ee;
     border-radius: 50%;
     background-color: #6c97b8;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
+    flex-shrink: 0;
 }
 
 .site-title {
     font-size: 22px;
+    text-align: center;
 }
 
-/* На смартфонах пункты меню идут вертикально */
+
+/* МЕНЮ */
+
 nav {
     width: 100%;
+
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    align-items: center;
+    gap: 10px;
 }
 
 nav a {
@@ -63,32 +73,21 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Основной контент занимает всю ширину экрана */
+
+/* ОСНОВНОЙ КОНТЕНТ */
+
 .content {
     width: 100%;
-    margin: 15px auto;
-    padding: 0 12px;
+    margin: 20px 0;
+    padding: 0 20px;
+
     display: flex;
     flex-direction: column;
-    gap: 15px;
 }
 
-.block {
-    width: 100%;
-    min-width: 0;
-    margin: 0;
-    padding: 15px;
-    background-color: #a299d3;
-    border: 1px solid #e3dee4;
-}
 
-.block h1,
-.block h2 {
-    margin-top: 0;
-    font-weight: normal;
-}
+/* ПОРЯДОК НА ТЕЛЕФОНЕ */
 
-/* На мобильном экране таблица располагается выше списка ссылок */
 #table {
     order: 1;
 }
@@ -101,10 +100,30 @@ nav a:hover {
     order: 3;
 }
 
+
+/* БЛОКИ */
+
+.block {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 20px;
+
+    background-color: #a299d3;
+    border: 1px solid #e3dee4;
+}
+
+.block h1,
+.block h2 {
+    margin-top: 0;
+    font-weight: normal;
+}
+
+
+/* СПИСОК */
+
 .block ol {
     margin: 0;
-    padding-left: 25px;
-    overflow-wrap: anywhere;
+    padding-left: 30px;
 }
 
 .block li {
@@ -115,34 +134,35 @@ a {
     color: #173f5b;
 }
 
+
+/* КАРТА ИЗОБРАЖЕНИЯ */
+
 .image-map {
     max-width: 500px;
     margin: 20px auto 0;
 }
 
 .image-map img {
-    display: block;
-    width: 100%;
+    max-width: 100%;
     height: auto;
+    display: block;
 }
 
-/* Таблица не должна ломать ширину экрана */
-#table {
-    overflow-x: auto;
-}
+
+/* ТАБЛИЦА */
 
 table {
     width: 100%;
     border-collapse: collapse;
     background-color: #fff;
+    font-size: 13px;
 }
 
 th,
 td {
     border: 1px solid #c7d4d4;
-    padding: 7px;
+    padding: 10px;
     text-align: center;
-    overflow-wrap: anywhere;
 }
 
 th {
@@ -157,11 +177,14 @@ tbody tr:nth-child(even) {
     background-color: #fff;
 }
 
-/* Форма */
+
+/* ФОРМА */
+
 form {
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
+
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -173,9 +196,9 @@ form input[type="date"],
 form select,
 form textarea {
     width: 100%;
-    max-width: 100%;
     margin-top: 4px;
     padding: 8px;
+
     font: inherit;
     border: 1px solid #777;
     border-radius: 2px;
@@ -191,7 +214,6 @@ form textarea {
 }
 
 fieldset {
-    min-width: 0;
     border: 1px solid #777;
     padding: 10px;
 }
@@ -209,12 +231,16 @@ fieldset {
 .submit {
     width: 130px;
     padding: 9px;
+
     border: 1px solid #a1afb9;
     background-color: #d8e7f1;
+
     cursor: pointer;
 }
 
-/* Подвал */
+
+/* FOOTER */
+
 footer {
     width: 100%;
     background-color: #c9d0d4;
@@ -223,27 +249,22 @@ footer {
 
 .footer-inner {
     width: 100%;
-    margin: 0 auto;
-    padding: 25px 15px;
+    padding: 30px 20px;
 }
 
-/* Планшеты и компьютеры */
+
+/* =========================================
+   ПЛАНШЕТ И КОМПЬЮТЕР
+   ========================================= */
+
 @media (min-width: 701px) {
 
-    /* Только основной контент и подвал ограничиваем 960px.
-       Шапка теперь занимает всю ширину */
-    .content,
-    .footer-inner {
-        max-width: 960px;
-    }
-
     .header-inner {
-        width: 100%;
-        max-width: none;
         min-height: 125px;
         padding: 15px 30px;
-        flex-wrap: nowrap;
-        gap: 0;
+
+        flex-direction: row;
+        align-items: center;
     }
 
     .logo {
@@ -256,45 +277,48 @@ footer {
         font-size: 28px;
     }
 
-    /* Меню максимально вправо */
     nav {
         width: auto;
         margin-left: auto;
+
         flex-direction: row;
-        flex-wrap: wrap;
+        align-items: center;
         gap: 25px;
     }
 
+
+    /* Контент */
+
     .content {
+        max-width: 960px;
         margin: 20px auto;
         padding: 0 20px;
-        gap: 20px;
     }
 
-    .block {
-        padding: 20px;
-    }
 
-    /* Возвращаем исходный порядок блоков на широком экране */
+    /* На компьютере порядок как в предыдущем задании */
+
     #links {
         order: 1;
     }
 
     #table {
         order: 2;
-        overflow-x: visible;
     }
 
     #form {
         order: 3;
     }
 
-    th,
-    td {
-        padding: 10px;
+
+    table {
+        font-size: 16px;
     }
 
+
     .footer-inner {
+        max-width: 960px;
+        margin: 0 auto;
         padding: 30px 20px;
     }
 }
