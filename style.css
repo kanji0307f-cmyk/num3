@@ -318,9 +318,10 @@ footer {
     }
 
 
-    .footer-inner {
-        max-width: 960px;
-        margin: 0 auto;
-        padding: 30px 20px;
+   .footer-inner {
+    width: 100%;
+    margin: 0;
+    padding: 30px 20px;
+    text-align: left;
     }
 }
