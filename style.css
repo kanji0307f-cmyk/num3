@@ -249,7 +249,9 @@ footer {
 
 .footer-inner {
     width: 100%;
-    padding: 30px 20px;
+    max-width: none;
+    margin: 0;
+    text-align: left;
 }
 
 
